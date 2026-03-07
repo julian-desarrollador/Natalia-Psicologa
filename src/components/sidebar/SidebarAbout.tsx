@@ -52,7 +52,7 @@ const SidebarAbout: React.FC = () => {
         </div>
         <a
           href="/cv-natalia-domecq.pdf"
-          download
+          download="CV-Natalia-Domecq.pdf"
           className="inline-flex items-center gap-2 bg-[#1FA7DA] hover:bg-[#178bb8] text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-sm mt-2 cursor-pointer"
           aria-label="Descargar CV en PDF"
         >
