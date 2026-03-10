@@ -9,6 +9,7 @@ const SidebarAbout: React.FC = () => {
     'Especialización en Psicoanálisis con niños — Universidad de Ciencias Empresariales y Sociales, Buenos Aires (tesis en construcción).',
     'Diplomatura en Bioética y Familia — Universidad Católica de La Plata, Buenos Aires (2023).',
     'Maestría en Psicología Clínica y de la Salud — TECH Global University, Andorra, España (2025).',
+    'Diplomatura Universitaria Internacional en Psicología de la Emergencia e Intervención con víctimas en crisis y desastres.',
   ];
 
   const toggleImage = () => {
@@ -50,7 +51,7 @@ const SidebarAbout: React.FC = () => {
             ))}
           </ul>
         </div>
-        <a
+        {/* <a
           href="/cv-natalia-domecq.pdf"
           download="CV-Natalia-Domecq.pdf"
           className="inline-flex items-center gap-2 bg-[#1FA7DA] hover:bg-[#178bb8] text-white px-4 py-2 rounded-md text-sm font-semibold transition-colors shadow-sm mt-2 cursor-pointer"
@@ -61,7 +62,7 @@ const SidebarAbout: React.FC = () => {
             <path d="M5 15a1 1 0 011 1v2a1 1 0 001 1h10a1 1 0 001-1v-2a1 1 0 112 0v2a3 3 0 01-3 3H7a3 3 0 01-3-3v-2a1 1 0 011-1z"></path>
           </svg>
           Descargar CV (PDF)
-        </a>
+        </a> */}
    {/*      <div className="mt-3">
           <a
             href="https://wa.me/5492916433000?text=Hola%20Natalia%2C%20tengo%20una%20consulta"
