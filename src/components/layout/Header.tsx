@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Clock, MapPin, Menu } from 'lucide-react';
+import Logo from './Logo';
 
 interface HeaderProps {
   onMenuToggle: () => void;
@@ -25,11 +26,14 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-6">
           {/* Logo and Mobile Menu Button */}
           <div className="flex items-center justify-between w-full lg:w-auto gap-3">
-            <div className="text-left">
-              <h1 className="text-2xl md:text-3xl font-bold text-[#2c3e50] leading-tight">
-                Lic. Natalia Domecq
-              </h1>
-              <p className="text-sm text-gray-600">Lic en Psicología</p>
+            <div className="flex items-center gap-3 text-left">
+              <Logo size={52} className="flex-shrink-0" />
+              <div>
+                <h1 className="text-2xl md:text-3xl font-bold text-[#2c3e50] leading-tight">
+                  Lic. Natalia Domecq
+                </h1>
+                <p className="text-sm text-gray-600">Lic en Psicología</p>
+              </div>
             </div>
             
             {/* Mobile Menu Toggle Button */}

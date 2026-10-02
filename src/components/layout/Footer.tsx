@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -142,7 +143,8 @@ const Footer: React.FC = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             {/* Logo */}
-            <div className="text-lg font-bold text-[#2c3e50]">
+            <div className="flex items-center gap-2 text-lg font-bold text-[#2c3e50]">
+              <Logo size={36} className="flex-shrink-0" />
               Lic. Natalia Domecq
             </div>
             
