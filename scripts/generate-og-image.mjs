@@ -51,7 +51,7 @@ const composed = await sharp({
     { input: photo, left: 0, top: 0 },
     { input: Buffer.from(overlay), left: 0, top: 0 },
   ])
-  .jpeg({ quality: 82, mozjpeg: true })
+  .jpeg({ quality: 82, mozjpeg: false, progressive: false })
   .toBuffer();
 
 const ogPath = path.join(root, 'public', 'og-image.jpg');
