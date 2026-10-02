@@ -29,10 +29,13 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
             <div className="flex items-center gap-3 text-left">
               <Logo size={52} className="flex-shrink-0" />
               <div>
-                <h1 className="text-2xl md:text-3xl font-bold text-[#2c3e50] leading-tight">
+                <h1
+                  className="text-2xl md:text-3xl text-[#2c3e50] leading-tight"
+                  style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600 }}
+                >
                   Lic. Natalia Domecq
                 </h1>
-                <p className="text-sm text-gray-600">Lic en Psicología</p>
+                <p className="text-sm text-gray-600 tracking-[0.12em]">Lic en Psicología</p>
               </div>
             </div>
             

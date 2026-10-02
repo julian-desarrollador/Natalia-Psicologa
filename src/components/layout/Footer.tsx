@@ -143,7 +143,10 @@ const Footer: React.FC = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             {/* Logo */}
-            <div className="flex items-center gap-2 text-lg font-bold text-[#2c3e50]">
+            <div
+              className="flex items-center gap-2 text-lg text-[#2c3e50]"
+              style={{ fontFamily: "'Playfair Display', Georgia, serif", fontWeight: 600 }}
+            >
               <Logo size={36} className="flex-shrink-0" />
               Lic. Natalia Domecq
             </div>

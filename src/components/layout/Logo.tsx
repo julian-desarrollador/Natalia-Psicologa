@@ -1,34 +1,59 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 interface LogoProps {
   size?: number;
   className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ size = 48, className }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 64 64"
-    width={size}
-    height={size}
-    className={className}
-    role="img"
-    aria-label="Logo de Natalia Domecq"
-  >
-    <circle cx="32" cy="32" r="32" fill="#1FA7DA" />
-    <text
-      x="32"
-      y="41"
-      textAnchor="middle"
-      fontFamily="Georgia, 'Times New Roman', serif"
-      fontSize="26"
-      fontWeight="700"
-      fill="#ffffff"
-      letterSpacing="-0.5"
+const Logo: React.FC<LogoProps> = ({ size = 48, className }) => {
+  const rawId = useId().replace(/:/g, '');
+  const topL = `${rawId}-top-l`;
+  const topR = `${rawId}-top-r`;
+  const botL = `${rawId}-bot-l`;
+  const botR = `${rawId}-bot-r`;
+
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      width={size}
+      height={size}
+      className={className}
+      role="img"
+      aria-label="Logo de Natalia Domecq"
     >
-      ND
-    </text>
-  </svg>
-);
+      <defs>
+        <linearGradient id={topL} x1="8" y1="8" x2="32" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#7ED4F2" />
+          <stop offset="55%" stopColor="#1FA7DA" />
+          <stop offset="100%" stopColor="#1488B8" />
+        </linearGradient>
+        <linearGradient id={topR} x1="56" y1="8" x2="32" y2="36" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#7ED4F2" />
+          <stop offset="55%" stopColor="#1FA7DA" />
+          <stop offset="100%" stopColor="#1488B8" />
+        </linearGradient>
+        <linearGradient id={botL} x1="14" y1="36" x2="32" y2="58" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FFB4A4" />
+          <stop offset="100%" stopColor="#FD7062" />
+        </linearGradient>
+        <linearGradient id={botR} x1="50" y1="36" x2="32" y2="58" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#FFB4A4" />
+          <stop offset="100%" stopColor="#FD7062" />
+        </linearGradient>
+      </defs>
+      <path fill={`url(#${botL})`} opacity="0.96" d="M31.2 35.2C24.5 34.2 14.2 37.2 13.2 46.4C12.3 54.6 21.2 58.4 29.2 53.2C33.6 50.2 34.4 43.2 33.2 38.6C32.6 36.6 32.2 35.6 31.2 35.2Z" />
+      <path fill={`url(#${botR})`} opacity="0.96" d="M32.8 35.2C39.5 34.2 49.8 37.2 50.8 46.4C51.7 54.6 42.8 58.4 34.8 53.2C30.4 50.2 29.6 43.2 30.8 38.6C31.4 36.6 31.8 35.6 32.8 35.2Z" />
+      <path fill={`url(#${topL})`} d="M31 24.5C27.2 15.2 16.4 7.6 9.2 13.6C2.2 19.4 3.6 31.2 12.6 35.6C19.2 38.8 27.2 36.4 30.6 32.2C32.2 30.2 32.2 27.2 31 24.5Z" />
+      <path fill={`url(#${topR})`} d="M33 24.5C36.8 15.2 47.6 7.6 54.8 13.6C61.8 19.4 60.4 31.2 51.4 35.6C44.8 38.8 36.8 36.4 33.4 32.2C31.8 30.2 31.8 27.2 33 24.5Z" />
+      <path fill="#2c3e50" d="M32 19.6c1.15 0 1.9 2.5 1.75 8.2-.12 4.6-.55 9.3-1.75 12.5-1.2-3.2-1.63-7.9-1.75-12.5C30.1 22.1 30.85 19.6 32 19.6Z" />
+      <circle cx="32" cy="17.6" r="2.15" fill="#2c3e50" />
+      <path d="M30.7 16.8C28.2 12.6 24.2 10.2 21.6 8.4" fill="none" stroke="#2c3e50" strokeWidth="1.7" strokeLinecap="round" />
+      <path d="M33.3 16.8C35.8 12.6 39.8 10.2 42.4 8.4" fill="none" stroke="#2c3e50" strokeWidth="1.7" strokeLinecap="round" />
+      <circle cx="21.1" cy="7.8" r="1.35" fill="#2c3e50" />
+      <circle cx="42.9" cy="7.8" r="1.35" fill="#2c3e50" />
+    </svg>
+  );
+};
 
 export default Logo;
